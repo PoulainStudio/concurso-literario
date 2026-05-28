@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Concurso Literario Escolar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="logo" href="#">Concurso Literario Escolar</a>
+        <ul class="nav-links">
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#categories">Categorías</a></li>
+          <li><a href="#rules">Bases</a></li>
+          <li><a href="#register">Inscripción</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="container hero-inner fade-in">
+          <h1 class="hero-title">Concurso Literario Escolar</h1>
+          <p class="hero-sub">Escribe, sueña y comparte tu voz — cada palabra cuenta.</p>
+          <a class="btn primary" href="#register">Inscribirse</a>
+        </div>
+      </section>
+
+      <section id="about" class="section container fade-in">
+        <h2 class="section-title">Sobre el concurso</h2>
+        <p class="lead">El Concurso Literario Escolar busca fomentar la creatividad y el gusto por la escritura entre estudiantes. Invitamos a participantes a compartir cuentos, poesías y ensayos que reflejen sus experiencias, ideas y sueños.</p>
+      </section>
+
+      <section id="categories" class="section container fade-in">
+        <h2 class="section-title">Categorías</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Cuento</h3>
+            <p>Ficción breve con inicio, desarrollo y desenlace.</p>
+          </article>
+          <article class="card">
+            <h3>Poesía</h3>
+            <p>Verso libre o rimado que explore imágenes y emociones.</p>
+          </article>
+          <article class="card">
+            <h3>Ensayo</h3>
+            <p>Reflexión argumentada sobre un tema de interés.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="rules" class="section container fade-in">
+        <h2 class="section-title">Bases y condiciones</h2>
+        <ul class="rules-list">
+          <li>Participantes: estudiantes de la institución.</li>
+          <li>Extensión: cuentos y ensayos hasta 2000 palabras; poesías hasta 60 versos.</li>
+          <li>Los trabajos deben ser originales y no publicados.</li>
+          <li>Fecha límite: por confirmar (consultar con la organización).</li>
+          <li>El jurado estará compuesto por docentes y escritores invitados.</li>
+        </ul>
+      </section>
+
+      <section id="register" class="section container fade-in">
+        <h2 class="section-title">Inscripción</h2>
+        <form id="registrationForm" class="form-grid" novalidate>
+          <div class="field">
+            <label for="fullName">Nombre completo</label>
+            <input id="fullName" name="fullName" type="text" required>
+          </div>
+
+          <div class="field">
+            <label for="age">Edad</label>
+            <input id="age" name="age" type="number" min="6" max="120" required>
+          </div>
+
+          <div class="field">
+            <label for="grade">Curso / Grado</label>
+            <input id="grade" name="grade" type="text" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+
+          <div class="field wide">
+            <label for="title">Título del trabajo</label>
+            <input id="title" name="title" type="text" required>
+          </div>
+
+          <div class="field">
+            <label for="genre">Género</label>
+            <select id="genre" name="genre" required>
+              <option value="">Seleccionar</option>
+              <option value="cuento">Cuento</option>
+              <option value="poesia">Poesía</option>
+              <option value="ensayo">Ensayo</option>
+            </select>
+          </div>
+
+          <div class="field wide">
+            <label for="text">Texto (pega tu texto o sube un archivo)</label>
+            <textarea id="text" name="text" rows="8" placeholder="Pega el texto aquí..."></textarea>
+            <div class="or">o</div>
+            <input id="file" name="file" type="file" accept=".txt,.doc,.docx,.pdf">
+          </div>
+
+          <div class="field wide">
+            <label class="checkbox"><input id="original" name="original" type="checkbox" required>Confirmo que este trabajo es original</label>
+          </div>
+
+          <div class="field wide">
+            <label for="inspiration">Inspiración (opcional)</label>
+            <input id="inspiration" name="inspiration" type="text">
+          </div>
+
+          <div class="field wide actions">
+            <button class="btn primary" type="submit">Enviar inscripción</button>
+            <button class="btn ghost" type="reset">Limpiar</button>
+          </div>
+        </form>
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
+      </section>
+
+      <section id="contact" class="section container fade-in">
+        <h2 class="section-title">Contacto</h2>
+        <p>Para consultas escribe a <a href="mailto:concurso@colegio.edu">concurso@colegio.edu</a> o visita la secretaría del colegio.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Concurso Literario Escolar — Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
