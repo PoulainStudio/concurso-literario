@@ -1,145 +1,601 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Concurso Literario Escolar</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Concurso Literario del Colegio Parroquial San Justo - Fomenta la creatividad y la pasión por la escritura">
+    <meta name="keywords" content="concurso, literario, escritura, colegio, poesía, cuento, ensayo">
+    <meta name="author" content="Colegio Parroquial San Justo">
+    
+    <title>Concurso Literario - Colegio Parroquial San Justo</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
+    
+    <!-- EmailJS CDN - Descomenta y configura tus credenciales cuando estés listo -->
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/build/index.min.js"></script> -->
+    <!-- INSTRUCCIONES EmailJS:
+         1. Ve a https://www.emailjs.com/ y crea una cuenta
+         2. Copia tu Public Key (ej: AbCdEfGhIjKlMnOpQrS)
+         3. Crea un Service (Gmail, Outlook, etc.) y copia el Service ID
+         4. Crea un Template para el formulario de inscripción y copia el Template ID
+         5. Reemplaza los valores de abajo:
+         PUBLIC_KEY = "TU_PUBLIC_KEY_AQUI"
+         SERVICE_ID = "TU_SERVICE_ID_AQUI"
+         TEMPLATE_ID_INSCRIPTION = "TU_TEMPLATE_ID_INSCRIPCION"
+         TEMPLATE_ID_CONTACT = "TU_TEMPLATE_ID_CONTACTO"
+    -->
+</head>
+<body>
+    <!-- HEADER Y NAVEGACIÓN -->
     <header class="site-header">
-      <nav class="nav container">
-        <a class="logo" href="#">Concurso Literario Escolar</a>
-        <ul class="nav-links">
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#categories">Categorías</a></li>
-          <li><a href="#rules">Bases</a></li>
-          <li><a href="#register">Inscripción</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
+        <nav class="nav container">
+            <a class="logo" href="#hero">📚 Concurso Literario<br><span style="font-size: 0.7em;">Colegio Parroquial San Justo</span></a>
+            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+            <ul class="nav-links">
+                <li><a href="#presentation">Presentación</a></li>
+                <li><a href="#bases">Bases</a></li>
+                <li><a href="#categories">Categorías</a></li>
+                <li><a href="#inscription">Inscripción</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-      <section id="hero" class="hero">
-        <div class="container hero-inner fade-in">
-          <h1 class="hero-title">Concurso Literario Escolar</h1>
-          <p class="hero-sub">Escribe, sueña y comparte tu voz — cada palabra cuenta.</p>
-          <a class="btn primary" href="#register">Inscribirse</a>
-        </div>
-      </section>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <div class="container hero-inner">
+                <h1 class="hero-title">Concurso Literario<span>Colegio Parroquial San Justo</span></h1>
+                <p class="hero-sub">Despierta tu creatividad, comparte tu voz y celebra el poder transformador de las palabras. Aquí, cada historia importa. Cada poema es un viaje. Cada reflexión es una chispa de luz.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a class="btn primary" href="#inscription">Inscribirse ahora</a>
+                    <a class="btn ghost" href="#presentation">Conocer más</a>
+                </div>
+            </div>
+        </section>
 
-      <section id="about" class="section container fade-in">
-        <h2 class="section-title">Sobre el concurso</h2>
-        <p class="lead">El Concurso Literario Escolar busca fomentar la creatividad y el gusto por la escritura entre estudiantes. Invitamos a participantes a compartir cuentos, poesías y ensayos que reflejen sus experiencias, ideas y sueños.</p>
-      </section>
+        <!-- PRESENTACIÓN -->
+        <section id="presentation" class="section container">
+            <h2 class="section-title">Presentación del Concurso</h2>
+            <div class="about-section">
+                <p>El <span class="highlight">Concurso Literario del Colegio Parroquial San Justo</span> es un espacio dedicado a fomentar la creatividad, la expresión artística y el gusto por la lectura y la escritura en nuestra comunidad educativa.</p>
+                <p>Creemos que <strong>la literatura es un puente hacia nuevos mundos</strong>, una herramienta para expresar emociones, reflexionar sobre la vida y conectar con otros seres humanos. Este concurso invita a todos nuestros estudiantes a participar, a arriesgar sus palabras y a descubrir el poder transformador de la escritura.</p>
+                <div class="quote">
+                    <strong>"Un escritor que espera el reconocimiento de su valor por parte de la sociedad es un tonto. El escritor debe contentarse con escribir lo mejor que pueda, con toda la honestidad y convicción de que pueda estar poseído."</strong> — J.D. Salinger
+                </div>
+            </div>
 
-      <section id="categories" class="section container fade-in">
-        <h2 class="section-title">Categorías</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Cuento</h3>
-            <p>Ficción breve con inicio, desarrollo y desenlace.</p>
-          </article>
-          <article class="card">
-            <h3>Poesía</h3>
-            <p>Verso libre o rimado que explore imágenes y emociones.</p>
-          </article>
-          <article class="card">
-            <h3>Ensayo</h3>
-            <p>Reflexión argumentada sobre un tema de interés.</p>
-          </article>
-        </div>
-      </section>
+            <!-- IMPORTANCIA DE LA LECTURA Y ESCRITURA -->
+            <div style="margin-top: 3rem;">
+                <h3 style="color: var(--primary-red); margin-bottom: 1.5rem;">¿Por qué es importante la lectura y escritura?</h3>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon">📖</div>
+                        <h4 style="color: var(--primary-red);">Desarrollo Intelectual</h4>
+                        <p>La lectura y escritura expanden nuestro vocabulario, mejoran nuestra capacidad de análisis y nos ayuda a desarrollar el pensamiento crítico.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">💭</div>
+                        <h4 style="color: var(--primary-red);">Expresión Emocional</h4>
+                        <p>A través de las palabras, podemos comunicar nuestros sentimientos, experiencias y perspectivas de manera profunda y auténtica.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🌍</div>
+                        <h4 style="color: var(--primary-red);">Conexión Cultural</h4>
+                        <p>La literatura nos conecta con otras culturas, épocas y formas de pensar, enriqueciendo nuestra comprensión del mundo.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">✨</div>
+                        <h4 style="color: var(--primary-red);">Creatividad sin Límites</h4>
+                        <p>La escritura es un acto de creación que nos permite imaginar nuevos mundos, vivir otras vidas y materializar nuestros sueños.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <section id="rules" class="section container fade-in">
-        <h2 class="section-title">Bases y condiciones</h2>
-        <ul class="rules-list">
-          <li>Participantes: estudiantes de la institución.</li>
-          <li>Extensión: cuentos y ensayos hasta 2000 palabras; poesías hasta 60 versos.</li>
-          <li>Los trabajos deben ser originales y no publicados.</li>
-          <li>Fecha límite: por confirmar (consultar con la organización).</li>
-          <li>El jurado estará compuesto por docentes y escritores invitados.</li>
-        </ul>
-      </section>
+        <!-- BASES Y CONDICIONES -->
+        <section id="bases" class="section container">
+            <h2 class="section-title">Bases y Condiciones</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div class="card">
+                    <h3>👥 Participantes</h3>
+                    <p>Todos los estudiantes del Colegio Parroquial San Justo, de cualquier nivel y división, pueden participar.</p>
+                </div>
+                <div class="card">
+                    <h3>📝 Extensión</h3>
+                    <ul class="checklist">
+                        <li>Cuentos y narrativas: hasta 3000 palabras</li>
+                        <li>Poesías: hasta 100 versos</li>
+                        <li>Ensayos: hasta 2500 palabras</li>
+                        <li>Microcuentos: hasta 500 palabras</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>⏰ Fechas Importantes</h3>
+                    <p><strong>Inscripción:</strong> Hasta el [FECHA A CONFIRMAR]<br>
+                    <strong>Cierre de inscripciones:</strong> [FECHA A CONFIRMAR]<br>
+                    <strong>Fallo de jurado:</strong> [FECHA A CONFIRMAR]<br>
+                    <strong>Ceremonia de premiación:</strong> [FECHA A CONFIRMAR]</p>
+                </div>
+                <div class="card">
+                    <h3>✅ Requisitos Obligatorios</h3>
+                    <ul class="checklist">
+                        <li>Trabajo original e inédito</li>
+                        <li>Autoría única o grupal (máx. 3 autores)</li>
+                        <li>Trabajo no publicado en otros concursos</li>
+                        <li>Declaración de originalidad firmada</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🏆 Jurado y Evaluación</h3>
+                    <p>El jurado estará compuesto por docentes especializados, escritores invitados y personalidades destacadas del ámbito literario.</p>
+                </div>
+                <div class="card">
+                    <h3>🎁 Premios</h3>
+                    <ul class="checklist">
+                        <li>Menciones de honor por categoría</li>
+                        <li>Reconocimiento público</li>
+                        <li>Publicación en revista escolar</li>
+                        <li>Certificados de participación</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-      <section id="register" class="section container fade-in">
-        <h2 class="section-title">Inscripción</h2>
-        <form id="registrationForm" class="form-grid" novalidate>
-          <div class="field">
-            <label for="fullName">Nombre completo</label>
-            <input id="fullName" name="fullName" type="text" required>
-          </div>
+        <!-- CATEGORÍAS Y GÉNEROS -->
+        <section id="categories" class="section container">
+            <h2 class="section-title">Categorías y Géneros Literarios</h2>
+            
+            <div style="margin-top: 2rem;">
+                <h3 style="color: var(--primary-red); margin-bottom: 1rem;">📚 Categorías Disponibles</h3>
+                <div class="cards-grid">
+                    <div class="card"><h4>Cuento</h4><p>Historia breve con trama completa, personajes definidos y conclusión.</p></div>
+                    <div class="card"><h4>Poesía</h4><p>Verso libre o rimado que explora imágenes, ritmo y emoción.</p></div>
+                    <div class="card"><h4>Ensayo</h4><p>Reflexión argumentada sobre un tema específico.</p></div>
+                    <div class="card"><h4>Crónica</h4><p>Relato de eventos reales ordenados cronológicamente.</p></div>
+                    <div class="card"><h4>Microcuento</h4><p>Cuento extremadamente breve con máximo impacto narrativo.</p></div>
+                    <div class="card"><h4>Relato Breve</h4><p>Narración concisa con elementos de sorpresa o giro final.</p></div>
+                    <div class="card"><h4>Relato Histórico</h4><p>Narrativa basada en hechos históricos reinterpretados.</p></div>
+                    <div class="card"><h4>Narrativa Juvenil</h4><p>Historias dirigidas al público adolescente.</p></div>
+                    <div class="card"><h4>Narrativa Fantástica</h4><p>Mundos imaginarios con elementos mágicos.</p></div>
+                    <div class="card"><h4>Ciencia Ficción</h4><p>Historias futuristas con base científica.</p></div>
+                    <div class="card"><h4>Terror</h4><p>Narrativas que buscan generar suspense y miedo.</p></div>
+                    <div class="card"><h4>Misterio</h4><p>Historias con enigmas y revelaciones.</p></div>
+                    <div class="card"><h4>Aventura</h4><p>Relatos de exploración y desafíos.</p></div>
+                    <div class="card"><h4>Drama</h4><p>Historias que exploran conflictos emocionales profundos.</p></div>
+                    <div class="card"><h4>Humor</h4><p>Textos que buscan provocar risa y entretenimiento.</p></div>
+                    <div class="card"><h4>Reflexión Personal</h4><p>Textos introspectivos sobre experiencias personales.</p></div>
+                    <div class="card"><h4>Carta Literaria</h4><p>Comunicación en formato epistolar.</p></div>
+                    <div class="card"><h4>Fábula</h4><p>Relato moral con personajes frecuentemente animales.</p></div>
+                    <div class="card"><h4>Leyenda</h4><p>Narrativa que mezcla realidad con elementos legendarios.</p></div>
+                    <div class="card"><h4>Texto Libre</h4><p>Experimentación sin restricciones de género.</p></div>
+                </div>
+            </div>
 
-          <div class="field">
-            <label for="age">Edad</label>
-            <input id="age" name="age" type="number" min="6" max="120" required>
-          </div>
+            <div style="margin-top: 3rem;">
+                <h3 style="color: var(--primary-red); margin-bottom: 1rem;">🎭 Géneros Literarios</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Género</th>
+                                <th>Descripción</th>
+                                <th>Características Principales</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Narrativo</strong></td>
+                                <td>Enfoque en contar historias</td>
+                                <td>Personajes, trama, conflicto</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lírico</strong></td>
+                                <td>Expresión de sentimientos</td>
+                                <td>Verso, ritmo, musicalidad</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dramático</strong></td>
+                                <td>Diálogos y acciones</td>
+                                <td>Diálogos, acotaciones</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ensayístico</strong></td>
+                                <td>Análisis y reflexión</td>
+                                <td>Argumentación, subjetividad</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Epistolar</strong></td>
+                                <td>Comunicación por cartas</td>
+                                <td>Formato epistolar, intimidad</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fantástico</strong></td>
+                                <td>Mundos imaginarios</td>
+                                <td>Lo sobrenatural, lo mágico</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Realista</strong></td>
+                                <td>Reflejo de la realidad</td>
+                                <td>Verosimilitud, cotidianidad</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Histórico</strong></td>
+                                <td>Basado en hechos históricos</td>
+                                <td>Contexto temporal, fidelidad</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Policial</strong></td>
+                                <td>Investigación y crímenes</td>
+                                <td>Misterio, deducción</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Suspenso</strong></td>
+                                <td>Tensión y expectativa</td>
+                                <td>Ritmo acelerado, incertidumbre</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Terror Psicológico</strong></td>
+                                <td>Miedo mental</td>
+                                <td>Angustia, perturbación</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ciencia Ficción</strong></td>
+                                <td>Futuros especulativos</td>
+                                <td>Tecnología, mundos alternativos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Distopía</strong></td>
+                                <td>Futuros negativos</td>
+                                <td>Crítica social, oscuridad</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Aventura</strong></td>
+                                <td>Viajes y desafíos</td>
+                                <td>Acción, exploración</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Romance</strong></td>
+                                <td>Relaciones amorosas</td>
+                                <td>Emociones, conflicto amoroso</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Comedia</strong></td>
+                                <td>Humor y risa</td>
+                                <td>Situaciones cómicas, diálogos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Satírico</strong></td>
+                                <td>Crítica mediante sátira</td>
+                                <td>Ironía, exageración</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Filosófico</strong></td>
+                                <td>Reflexión profunda</td>
+                                <td>Ideas, preguntas existenciales</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Religioso</strong></td>
+                                <td>Temas espirituales</td>
+                                <td>Fe, trascendencia, valores</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Costumbrista</strong></td>
+                                <td>Tradiciones y costumbres</td>
+                                <td>Descripción de hábitos locales</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
 
-          <div class="field">
-            <label for="grade">Curso / Grado</label>
-            <input id="grade" name="grade" type="text" required>
-          </div>
+        <!-- FORMULARIO DE INSCRIPCIÓN -->
+        <section id="inscription" class="section container">
+            <h2 class="section-title">Formulario de Inscripción</h2>
+            <form id="registrationForm" class="form-container">
+                <h3 class="form-title">Completa tus datos y sube tu obra</h3>
 
-          <div class="field">
-            <label for="email">Correo electrónico</label>
-            <input id="email" name="email" type="email" required>
-          </div>
+                <!-- DATOS PERSONALES -->
+                <fieldset style="border: none; padding: 0; margin-bottom: 2rem;">
+                    <legend style="font-weight: 700; color: var(--primary-red); margin-bottom: 1rem;">Datos Personales</legend>
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="fullName">Nombre y Apellido <span class="required">*</span></label>
+                            <input id="fullName" name="fullName" type="text" required>
+                        </div>
+                        <div class="field">
+                            <label for="age">Edad <span class="required">*</span></label>
+                            <input id="age" name="age" type="number" min="8" max="120" required>
+                        </div>
+                        <div class="field">
+                            <label for="grade">Curso <span class="required">*</span></label>
+                            <input id="grade" name="grade" type="text" placeholder="Ej: 2do Año A" required>
+                        </div>
+                        <div class="field">
+                            <label for="division">División <span class="required">*</span></label>
+                            <input id="division" name="division" type="text" placeholder="Ej: A, B, C" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Correo Electrónico <span class="required">*</span></label>
+                            <input id="email" name="email" type="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Teléfono (Opcional)</label>
+                            <input id="phone" name="phone" type="tel">
+                        </div>
+                    </div>
+                </fieldset>
 
-          <div class="field wide">
-            <label for="title">Título del trabajo</label>
-            <input id="title" name="title" type="text" required>
-          </div>
+                <!-- DATOS DE LA OBRA -->
+                <fieldset style="border: none; padding: 0; margin-bottom: 2rem;">
+                    <legend style="font-weight: 700; color: var(--primary-red); margin-bottom: 1rem;">Datos de la Obra</legend>
+                    <div class="form-grid">
+                        <div class="field wide">
+                            <label for="title">Título de la Obra <span class="required">*</span></label>
+                            <input id="title" name="title" type="text" required>
+                        </div>
+                        <div class="field">
+                            <label for="category">Categoría <span class="required">*</span></label>
+                            <select id="category" name="category" required>
+                                <option value="">-- Seleccionar --</option>
+                                <option value="cuento">Cuento</option>
+                                <option value="poesia">Poesía</option>
+                                <option value="ensayo">Ensayo</option>
+                                <option value="cronica">Crónica</option>
+                                <option value="microcuento">Microcuento</option>
+                                <option value="relato-breve">Relato Breve</option>
+                                <option value="relato-historico">Relato Histórico</option>
+                                <option value="narrativa-juvenil">Narrativa Juvenil</option>
+                                <option value="narrativa-fantastica">Narrativa Fantástica</option>
+                                <option value="ciencia-ficcion">Ciencia Ficción</option>
+                                <option value="terror">Terror</option>
+                                <option value="misterio">Misterio</option>
+                                <option value="aventura">Aventura</option>
+                                <option value="drama">Drama</option>
+                                <option value="humor">Humor</option>
+                                <option value="reflexion">Reflexión Personal</option>
+                                <option value="carta-literaria">Carta Literaria</option>
+                                <option value="fabula">Fábula</option>
+                                <option value="leyenda">Leyenda</option>
+                                <option value="texto-libre">Texto Libre</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="genre">Género Literario <span class="required">*</span></label>
+                            <select id="genre" name="genre" required>
+                                <option value="">-- Seleccionar --</option>
+                                <option value="narrativo">Narrativo</option>
+                                <option value="lirico">Lírico</option>
+                                <option value="dramatico">Dramático</option>
+                                <option value="ensayistico">Ensayístico</option>
+                                <option value="epistolar">Epistolar</option>
+                                <option value="fantastico">Fantástico</option>
+                                <option value="realista">Realista</option>
+                                <option value="historico">Histórico</option>
+                                <option value="policial">Policial</option>
+                                <option value="suspenso">Suspenso</option>
+                                <option value="terror-psicologico">Terror Psicológico</option>
+                                <option value="ciencia-ficcion">Ciencia Ficción</option>
+                                <option value="distopia">Distopía</option>
+                                <option value="aventura">Aventura</option>
+                                <option value="romance">Romance</option>
+                                <option value="comedia">Comedia</option>
+                                <option value="satirico">Satírico</option>
+                                <option value="filosofico">Filosófico</option>
+                                <option value="religioso">Religioso</option>
+                                <option value="costumbrista">Costumbrista</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
 
-          <div class="field">
-            <label for="genre">Género</label>
-            <select id="genre" name="genre" required>
-              <option value="">Seleccionar</option>
-              <option value="cuento">Cuento</option>
-              <option value="poesia">Poesía</option>
-              <option value="ensayo">Ensayo</option>
-            </select>
-          </div>
+                <!-- CONTENIDO DE LA OBRA -->
+                <fieldset style="border: none; padding: 0; margin-bottom: 2rem;">
+                    <legend style="font-weight: 700; color: var(--primary-red); margin-bottom: 1rem;">Tu Obra Literaria</legend>
+                    <div class="form-grid">
+                        <div class="field wide">
+                            <label for="text">Texto de la Obra <span class="required">*</span></label>
+                            <textarea id="text" name="text" placeholder="Pega tu texto aquí o sube un archivo..." rows="10"></textarea>
+                            <p style="font-size: 0.85rem; color: var(--medium-gray); margin-top: 0.5rem;">Puedes escribir directamente o cargar un archivo</p>
+                        </div>
+                        <div class="field wide">
+                            <label for="file">Cargar Archivo <span class="text-sm">(Opcional si escribiste arriba)</span></label>
+                            <input id="file" name="file" type="file" accept=".txt,.doc,.docx,.pdf,.rtf">
+                            <p style="font-size: 0.85rem; color: var(--medium-gray); margin-top: 0.5rem;">Formatos: TXT, DOC, DOCX, PDF, RTF (máx 10MB)</p>
+                        </div>
+                        <div class="field wide">
+                            <label for="inspiration">Inspiración o Motivación (Opcional)</label>
+                            <textarea id="inspiration" name="inspiration" placeholder="Comparte qué te inspiró a escribir esta obra..." rows="4"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
 
-          <div class="field wide">
-            <label for="text">Texto (pega tu texto o sube un archivo)</label>
-            <textarea id="text" name="text" rows="8" placeholder="Pega el texto aquí..."></textarea>
-            <div class="or">o</div>
-            <input id="file" name="file" type="file" accept=".txt,.doc,.docx,.pdf">
-          </div>
+                <!-- DECLARACIONES -->
+                <fieldset style="border: none; padding: 0; margin-bottom: 2rem;">
+                    <legend style="font-weight: 700; color: var(--primary-red); margin-bottom: 1rem;">Declaraciones y Aceptación</legend>
+                    <div class="checkbox-group">
+                        <label class="checkbox">
+                            <input id="original" name="original" type="checkbox" required>
+                            <span>Declaro que este trabajo es <strong>completamente original</strong> y de mi autoría, nunca publicado ni presentado a otro concurso.</span>
+                        </label>
+                        <label class="checkbox">
+                            <input id="authorship" name="authorship" type="checkbox" required>
+                            <span>Declaro ser el <strong>único autor</strong> de este trabajo (o formar parte del grupo de autores si es grupal, máx. 3 autores).</span>
+                        </label>
+                        <label class="checkbox">
+                            <input id="rights" name="rights" type="checkbox" required>
+                            <span>Autorizo al Colegio Parroquial San Justo a <strong>publicar y divulgar</strong> mi obra en caso de resultar premiada o mencionada.</span>
+                        </label>
+                        <label class="checkbox">
+                            <input id="terms" name="terms" type="checkbox" required>
+                            <span>Acepto las <strong>bases y condiciones</strong> del Concurso Literario.</span>
+                        </label>
+                    </div>
+                </fieldset>
 
-          <div class="field wide">
-            <label class="checkbox"><input id="original" name="original" type="checkbox" required>Confirmo que este trabajo es original</label>
-          </div>
+                <!-- BOTONES -->
+                <div class="form-actions">
+                    <button class="btn primary" type="submit">📤 Enviar Inscripción</button>
+                    <button class="btn outline" type="reset">🔄 Limpiar Formulario</button>
+                </div>
 
-          <div class="field wide">
-            <label for="inspiration">Inspiración (opcional)</label>
-            <input id="inspiration" name="inspiration" type="text">
-          </div>
+                <!-- MENSAJE DE RESPUESTA -->
+                <div id="formMessage" class="form-message" role="alert" aria-live="polite"></div>
+            </form>
+        </section>
 
-          <div class="field wide actions">
-            <button class="btn primary" type="submit">Enviar inscripción</button>
-            <button class="btn ghost" type="reset">Limpiar</button>
-          </div>
-        </form>
-        <div id="formMessage" class="form-message" aria-live="polite"></div>
-      </section>
+        <!-- SECCIÓN DE CONTACTO -->
+        <section id="contact" class="section container">
+            <h2 class="section-title">Contacto y Preguntas Frecuentes</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <!-- FORMULARIO DE CONTACTO -->
+                <div style="grid-column: 1 / -1;">
+                    <h3 style="color: var(--primary-red); margin-bottom: 1.5rem;">📧 Formulario de Contacto</h3>
+                    <form id="contactForm" class="form-container" style="max-width: 100%;">
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="contactName">Nombre <span class="required">*</span></label>
+                                <input id="contactName" name="contactName" type="text" required>
+                            </div>
+                            <div class="field">
+                                <label for="contactEmail">Correo Electrónico <span class="required">*</span></label>
+                                <input id="contactEmail" name="contactEmail" type="email" required>
+                            </div>
+                            <div class="field wide">
+                                <label for="subject">Asunto <span class="required">*</span></label>
+                                <input id="subject" name="subject" type="text" required>
+                            </div>
+                            <div class="field wide">
+                                <label for="message">Mensaje <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn primary" type="submit">Enviar Mensaje</button>
+                            </div>
+                        </div>
+                        <div id="contactMessage" class="form-message" role="alert" aria-live="polite"></div>
+                    </form>
+                </div>
 
-      <section id="contact" class="section container fade-in">
-        <h2 class="section-title">Contacto</h2>
-        <p>Para consultas escribe a <a href="mailto:concurso@colegio.edu">concurso@colegio.edu</a> o visita la secretaría del colegio.</p>
-      </section>
+                <!-- INFORMACIÓN DE CONTACTO -->
+                <div class="card">
+                    <h4>📞 Teléfono</h4>
+                    <p><strong>Primario y Secundario:</strong> 011 4651 2560</p>
+                    <p><strong>Inicial:</strong> 011 4651-9847</p>
+                </div>
+
+                <div class="card">
+                    <h4>📧 Correo Electrónico</h4>
+                    <p><a href="mailto:colegioparroquialsanjusto@gmail.com" style="color: var(--primary-red);">colegioparroquialsanjusto@gmail.com</a></p>
+                    <p><a href="mailto:direccionpquialsj.secundario@gmail.com" style="color: var(--primary-red);">direccionpquialsj.secundario@gmail.com</a></p>
+                </div>
+
+                <div class="card">
+                    <h4>📍 Ubicación</h4>
+                    <p><strong>Primario y Secundario:</strong> Monseñor José Francisco Marcón 3060</p>
+                    <p><strong>Inicial:</strong> Monseñor José Francisco Marcón 3153</p>
+                    <p>San Justo, Buenos Aires, Argentina</p>
+                </div>
+
+                <!-- PREGUNTAS FRECUENTES -->
+                <div style="grid-column: 1 / -1; margin-top: 2rem;">
+                    <h3 style="color: var(--primary-red); margin-bottom: 1.5rem;">❓ Preguntas Frecuentes</h3>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h4>¿Puedo participar si no soy estudiante del colegio?</h4>
+                            <p>No. El concurso es exclusivo para estudiantes del Colegio Parroquial San Justo.</p>
+                        </div>
+                        <div class="card">
+                            <h4>¿Hay límite de obras por participante?</h4>
+                            <p>Puedes enviar hasta 2 obras por categoría. Cada una debe ser diferente.</p>
+                        </div>
+                        <div class="card">
+                            <h4>¿Puedo participar en grupo?</h4>
+                            <p>Sí, pero máximo 3 autores por obra. Todos los autores deben estar inscriptos.</p>
+                        </div>
+                        <div class="card">
+                            <h4>¿Es gratis participar?</h4>
+                            <p>Sí, la inscripción es completamente gratuita para todos los estudiantes.</p>
+                        </div>
+                        <div class="card">
+                            <h4>¿Qué pasa si olvido hacer clic en "Enviar"?</h4>
+                            <p>No te preocupes. Puedes volver a cargar el formulario y enviar tu inscripción cuantas veces necesites.</p>
+                        </div>
+                        <div class="card">
+                            <h4>¿Mi obra será publicada?</h4>
+                            <p>Las obras premiadas y mencionadas serán publicadas en la revista escolar y en la web del colegio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN EXTRA: FRASES INSPIRADORAS -->
+        <section style="background: linear-gradient(135deg, rgba(168, 82, 65, 0.1) 0%, rgba(58, 124, 165, 0.1) 100%); padding: 4rem 0; margin: 4rem 0; text-align: center;">
+            <div class="container">
+                <h2 style="color: var(--primary-red); margin-bottom: 2rem;">✨ Frases Inspiradoras sobre la Literatura</h2>
+                <div class="cards-grid" style="margin-top: 2rem;">
+                    <div class="quote" style="margin: 0;">
+                        <strong>"Las palabras son, por supuesto, la forma de arte más poderosa que posee la humanidad."</strong> — J.K. Rowling
+                    </div>
+                    <div class="quote" style="margin: 0;">
+                        <strong>"No escribo historias. Escribo verdades que escaparon de la realidad."</strong> — Anónimo
+                    </div>
+                    <div class="quote" style="margin: 0;">
+                        <strong>"La literatura es la prueba de que la vida no es suficiente."</strong> — Jorge Luis Borges
+                    </div>
+                    <div class="quote" style="margin: 0;">
+                        <strong>"Un libro es un sueño que sostienes en la mano."</strong> — Neil Gaiman
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
-      <div class="container">
-        <p>&copy; <span id="year"></span> Concurso Literario Escolar — Todos los derechos reservados.</p>
-      </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏫 Colegio Parroquial San Justo</h3>
+                    <p>Una institución educativa comprometida con la excelencia, la alegría y la formación integral de nuestros estudiantes.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>📎 Enlaces Rápidos</h3>
+                    <a href="#presentation">Presentación</a>
+                    <a href="#bases">Bases</a>
+                    <a href="#categories">Categorías</a>
+                    <a href="#inscription">Inscripción</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+                <div class="footer-section">
+                    <h3>👥 Redes Sociales</h3>
+                    <p>Síguenos en:</p>
+                    <a href="https://www.instagram.com/parroquial.sanjusto/" target="_blank">Instagram @parroquial.sanjusto</a>
+                    <a href="https://www.instagram.com/parroquialseduca/" target="_blank">Instagram @parroquialeducativa</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Volver al inicio</a>
+                <a href="https://parroquialsanjusto.com" target="_blank">Sitio oficial del colegio</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> <strong>Concurso Literario - Colegio Parroquial San Justo</strong> | Todos los derechos reservados.</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Diseñado con ❤️ para fomentar la creatividad y la pasión por la literatura</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- SCRIPTS -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
